@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 // retrieve a record
 router.get("/:id", async (req, res) => {
     let collection = db.collection("records");
-    let filter = {_id: new ObjectID(req.params.id)};
+    let filter = {_id: new ObjectId(req.params.id)};
     let results = await collection.findOne(filter);
 
     if (results) {
@@ -41,7 +41,7 @@ router.post("/", async (req, res) => {
 // update a record
 router.patch("/:id", async (req, res) => {
     let filter = {
-        _id: new ObjectID(req.params.id)
+        _id: new ObjectId(req.params.id)
     };
     let updates = {
         $set: {
@@ -60,7 +60,7 @@ router.patch("/:id", async (req, res) => {
 // delete a record
 router.delete("/:id", async (req, res) => {
     let filter = {
-        _id: new ObjectID(req.params.id)
+        _id: new ObjectId(req.params.id)
     };
 
     let collection = await db.collection("records");

@@ -1,4 +1,2 @@
 # mern-app-back
-Backend of an MERN app, based on
-https://www.mongodb.com/languages/mern-stack-tutorial
-
+Template for starting up the back-end of my MERN apps
